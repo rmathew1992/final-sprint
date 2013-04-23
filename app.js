@@ -48,7 +48,6 @@ function facebookGetUser() {
   }
 }
 
-
 app.get('/login', Facebook.loginRequired(), function(req, res){
   res.redirect('/');
 });
@@ -61,8 +60,6 @@ app.get('/logout', facebookGetUser(), function(req, res){
 app.get('/', facebookGetUser(),routes.index);
 app.get('/users', user.list);
 app.get('/home',routes.home);
-app.get('/login',routes.login)
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
