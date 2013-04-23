@@ -33,6 +33,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+
 //req.user is actually facebook ID not name
 function facebookGetUser() {
   return function(req, res, next) {
@@ -47,7 +48,7 @@ function facebookGetUser() {
   }
 }
 
-app.get('/', facebookGetUser(), index.home);
+
 app.get('/login', Facebook.loginRequired(), function(req, res){
   res.redirect('/');
 });
@@ -56,6 +57,12 @@ app.get('/logout', facebookGetUser(), function(req, res){
   req.session.destroy();
   res.redirect('/');
 });
+
+app.get('/', facebookGetUser(),routes.index);
+app.get('/users', user.list);
+app.get('/home',routes.home);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
