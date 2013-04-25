@@ -3,4 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  
+  div(id='logindiv')
+    h2
+      | Get Started:
+    a(href='/login')
+      img(id='loginbutton', src='../images/facebook_login.png',)

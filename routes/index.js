@@ -3,8 +3,38 @@
  * GET home page.
  */
 
+var Idea = require('../models/idea.js');
+var User = require('../models/user.js');
+
 exports.index = function(req, res){
-	res.render('index', { title: 'Express' });
+	req.facebook.api('/me', function(err, user) {
+		if (err) {
+			console.log(err)
+		}
+		else {
+			console.log(user);
+			User.findOne({fbid: user.id}).exec(function(err, foundUser) {
+				if (foundUser == null){
+					console.log('User not found.');
+					var newUser = new User({
+						fbid: user.id,
+						name: user.name,
+						createdIdeas: [],
+						likedIdeas: [],
+						dislikedIdeas: []
+					});
+					newUser.save(function(){
+						if (err){
+							console.log(err);
+						}
+						else {
+							res.render('home',{title:'Landing page'});
+						}
+					});
+				}
+			});
+		}
+	})
 };
 
 exports.login = function(req, res){
