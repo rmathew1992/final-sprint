@@ -6,3 +6,42 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*General CSS styling*/
+#alignname{
+	text-align: right;
+}
+#general{
+	border-bottom: solid;
+	border-color: #DADAD3;
+	border-bottom-width: 1px;
+}
+
+/*Inspiration page */
+.ideapanel{
+	float:left;
+	border-color:black;
+	border-style: solid;
+	padding:195px;
+	margin:10px;
+	box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ideapanel:hover{
+	box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*New Idea page */
+
+#newideaform{
+	border:black solid;
+	padding:20px;
+}
+
+/*Idea pool*/
+
+
+
+
+
+
