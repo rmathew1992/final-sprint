@@ -1,6 +1,8 @@
 extends layout
 
 block content
-	h1= title
+	div(id='general')
+		h1(id='alignname') App Name
 	p Welcome to #{title}
-	button(id="clickinspiration") Inspire Me!	 
+	form(id="generate",action="/ideas",method="get")
+		button(id="clickinspire") Generate	 

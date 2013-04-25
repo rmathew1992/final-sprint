@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	div(id='general')
+		h1(id='alignname') App Name
+	br
+	div(id='newideaform')
+		form(id='saveidea', action='/savegoal', method='post')
+			h4 Title
+			input(type='text', name='title') 
+			h4 Description
+			textarea(id='description', name='daily', rows='5')
+			h4 Tags
+			input(type='text', name='tags')
+			br
+			br 
+			button(id="Save") Save
