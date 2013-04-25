@@ -7,6 +7,7 @@ var Idea = require('../models/idea.js');
 var User = require('../models/user.js');
 
 exports.index = function(req, res){
+	console.log('called index');
 	req.facebook.api('/me', function(err, user) {
 		if (err) {
 			console.log(err)
@@ -32,16 +33,21 @@ exports.index = function(req, res){
 						}
 					});
 				}
+				else{
+					res.render('home',{title:'Landing page'});
+				}
 			});
 		}
 	})
 };
 
 exports.login = function(req, res){
+	console.log('called login');
 	res.render('login', { title: 'Login Page' })
 };
 
 exports.home= function(req,res){
+	console.log('called home');
 	res.render('home',{title:'Landing Page'});
 };
 exports.inspire= function(req,res){
