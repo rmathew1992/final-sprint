@@ -4,8 +4,27 @@ block content
  
 	div(id='general')
 		h1(id='alignname') App Name
-	div(id='nav bars')
-		h1(id='alignname') App Name
-		h4 Thing1
-	form(id="inspire",action="/inspire",method="get")
-		button(id="needinspire") Stuck?	
+		input.textinput(type='text', placeholder='Search for an idea', id='searchbar')
+	
+	div(id='navbar')
+		form(id="ideapool",action="/ideapool",method="get")
+			button(class='navbarbutton',id='navbar_ideapool') Explore all ideas
+		
+		form(id="inspire",action="/inspire",method="get")
+			button(class='navbarbutton',id='navbar_stuck') Recommend Ideas	
+		
+		button(class='navbarbutton',id='yourideas') Your Ideas
+		div(id='navbar_yourideas') 
+			h4 Idea 1
+			h4 Idea 2
+			h4 Idea 3
+		
+		
+		
+		
+
+				
+	//- form(id="inspire",action="/inspire",method="get")
+	//- 	br
+	//- 	br
+	//- 	button(id="needinspire") Stuck?	

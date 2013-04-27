@@ -12,10 +12,17 @@ a {
 	text-align: right;
 }
 #general{
-	border-bottom: solid;
-	border-color: #DADAD3;
-	border-bottom-width: 1px;
+	border-bottom: solid #8A8484;
+	border-width: 1.5px;
 }
+.navbarbutton{
+	float:left;
+}
+#searchbar{
+	border-radius: 5px;
+	padding: 0px;
+}
+
 
 /*Inspiration page */
 .ideapanel{
@@ -25,6 +32,7 @@ a {
 	padding:195px;
 	margin:10px;
 	box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+
 }
 
 .ideapanel:hover{

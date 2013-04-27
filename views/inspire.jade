@@ -3,6 +3,19 @@ extends layout
 block content
 	div(id='general')
 		h1(id='alignname') App Name
-	p Welcome to #{title}
+
+	div(id='navbar')
+		form(id="ideapool",action="/ideapool",method="get")
+			button(class='navbarbutton',id='navbar_ideapool') Explore all ideas
+		
+		button(class='navbarbutton',id='navbar_stuck') Recommend Ideas	
+		
+		button(class='navbarbutton',id='yourideas') Your Ideas
+		div(id='navbar_yourideas') 
+			h4 Idea 1
+			h4 Idea 2
+			h4 Idea 3
+		br
+	p 
 	form(id="generate",action="/ideas",method="get")
 		button(id="clickinspire") Generate	 
