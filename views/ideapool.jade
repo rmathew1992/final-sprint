@@ -19,6 +19,15 @@ block content
 	br
 	br
 	br
-	div(id='random')
-		h4 An idea would go here
-		button(id="idea1") Click button to see whole idea		
+	//- div(id='random')
+	//- 	h4 An idea would go here
+	//- 	button(id="idea1") Click button to see whole idea
+	div(class='ideaPoolWrap')
+		each idea in ideas
+			div(class='ideaPreview')
+				p.title= idea.title
+				p.description= idea.description
+				div(class='tagWrap')
+					each tag in idea.tags
+						div(class='tag')
+							p.tag= tag

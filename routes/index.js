@@ -66,7 +66,7 @@ exports.ideapool= function(req,res){
 		}
 		else {
 			console.log(ideas);
-			res.render('ideapool',{title: 'Idea Pool',ideas: ideas});
+			res.render('ideapool', {title: 'Idea Pool', ideas: ideas});
 		}
 	})
 }
@@ -89,7 +89,7 @@ exports.saveidea = function(req,res){
 		else{
 			var newIdea = new Idea({
 				title: idea.title,
-				tags: idea.tags.split(" "),
+				tags: idea.tags.split(","),
 				description: idea.description,
 				creator: [foundUser._id],
 				likedBy: [],
