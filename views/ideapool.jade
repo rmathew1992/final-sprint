@@ -12,8 +12,13 @@ block content
 					each tag in idea.tags
 						div(class='tag')
 							p.tag= tag
-	include _navigation
+				div(class='popularity')
+					img(border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10')
+					p(class='dislikes',class='temp_img') idea.likedBy
+					img(border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img')
+					p(class='dislikes') idea.dislikedBy
+				
 
-	div(id='random')
-		h4 An idea would go here
-		button(id="idea1") Click button to see whole idea		
+
+
+		
