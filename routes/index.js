@@ -52,7 +52,10 @@ exports.home= function(req,res){
 };
 
 exports.inspire= function(req,res){
-	res.render('inspire',{title:'Inspiration'});
+	Idea.find({}).populate('ideas').exec(function(err,docs){
+	if(err) return console.log('error',err);
+	res.render('inspire',{title:'Inspiration',ideas:docs});
+	});
 };
 
 exports.newidea= function(req,res){
@@ -114,3 +117,7 @@ exports.saveidea = function(req,res){
 		}
 	});
 }
+exports.randomidea= function(req,res){
+	console.log('called home');
+	res.render('randomidea',{title:'Random Idea'});
+};

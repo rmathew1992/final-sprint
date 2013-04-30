@@ -16,11 +16,18 @@ a {
 	color: black;
 	text-decoration: none;
 }
-
-
+h1{
+	padding: 0px;
+	margin: 0px;
+}
+h4{
+	padding: 0px;
+	margin: 0px;
+}
 /*General CSS styling*/
 #alignname{
 	text-align: right;
+	padding: 20px
 }
 #general{
 	border-bottom: solid #8A8484;
@@ -28,12 +35,20 @@ a {
 }
 
 #searchbar{
-	border-radius: 5px;
-	padding: 0px;
+	border-radius: 25px;
+	position: absolute;
+	top:25px;
+	float:right;
+	margin-left:10px;
+	padding-left: 10px;
 }
 .navbar{
 	float:left;
 	padding:10px;
+}
+#navbar_container{
+	width:500px;
+	height: 50px;
 }
 
 
@@ -103,6 +118,7 @@ div.tagWrap {
 	text-align:center;*/
 }
 
+
 div.tag {
 	display: inline-block;
 	margin-left:5px;
@@ -121,5 +137,16 @@ p.tag {
 	line-height:15px;
 }
 
+/*Random idea*/
+#temp_description{
+	display: inline-block;
+	width:300px;
+
+}
+.temp{
+	padding-left:20px;
+	padding-top: 10px;
+
+}
 
 

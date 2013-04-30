@@ -64,7 +64,9 @@ app.get('/newidea',routes.newidea);
 app.get('/inspire',routes.inspire);
 app.get('/ideas/:ideaName',routes.showidea);
 app.get('/ideapool',routes.ideapool);
+app.get('/randomidea',routes.randomidea);
 app.post('/saveidea',routes.saveidea);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
