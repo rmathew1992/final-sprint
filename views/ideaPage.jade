@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	include _navigation
+
+	div(class='ideaPreview')
+		p.title= pageIdea.title
+		p.description= pageIdea.description
+		div(class='tagWrap')
+			each tag in pageIdea.tags
+				div(class='tag')
+					p.tag= tag

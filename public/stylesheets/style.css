@@ -84,8 +84,19 @@ h4{
 /*New Idea page */
 
 #newideaform{
-	border:black solid;
+	width:250px;
+	height:350px;
+	border: 1px solid rgba(0,0,0,0.5);;
 	padding:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+p.ideaForm {
+	line-height:50px;
+	font-family:'LatoRegular',sans-serif;
+	font-size:20px;
+	color:rgb(51,153,51);
 }
 
 /*Idea pool*/
@@ -201,8 +212,6 @@ p.tag {
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-bottom: 5px;
-
-
 }
 
 #temp_tagwrapper {
@@ -212,4 +221,33 @@ p.tag {
 	margin-right:auto;
 }
 
+/*Inspire*/
 
+#generateButton{
+	margin-left:auto;
+	margin-right:auto;
+	width:100px;
+	height:30px;
+	background-color:rgb(51,153,51);
+	font-family:'LatoLight',sans-serif;
+	font-size:20px;
+	line-height:30px;
+	text-align:center;
+	color:rgb(255,255,255);
+	cursor:pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#ideaWrap{
+	width:225px;
+	height:275px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+}

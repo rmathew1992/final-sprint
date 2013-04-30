@@ -5,11 +5,20 @@ $(function(){
 	$('#navbar_ideapanel').hide();	
 	$('#navbar_yourideas').click(function(){
 		console.log("You clicked it");
-		$('#navbar_ideapanel').slideDown('slow');
+		$.get('/yourIdeas', function(data){
+			console.log(data);
+			$('#navbar_ideapanel').html(data);
+			$('#navbar_ideapanel').slideDown('slow');
+		});
+		// $('#navbar_ideapanel').slideDown('slow');
 	})
-	$('#navbar_yourideas_close').click(function(){
+	$(document).on('click','#navbar_yourideas_close',function(){
 		console.log("Closing your ideas");
-		$('#navbar_ideapanel').hide();
+		$('#navbar_ideapanel').slideUp('slow');
 	})
+	// $('#navbar_yourideas_close').click(function(){
+	// 	console.log("Closing your ideas");
+	// 	$('#navbar_ideapanel').hide();
+	// })
   	});
 })

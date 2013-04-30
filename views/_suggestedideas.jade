@@ -3,5 +3,6 @@ extends layout
 block content
 	each idea, i in ideas
 		p #{idea.title}
-	p This is appearing
+		div= idea.title
+		p= idea.description
 	

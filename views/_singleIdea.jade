@@ -1,0 +1,7 @@
+div(class='ideaPreview')
+	p.title= idea.title
+	p.description= idea.description
+	div(class='tagWrap')
+		each tag in idea.tags
+			div(class='tag')
+				p.tag= tag

@@ -75,7 +75,17 @@ exports.ideapool= function(req,res){
 }
 
 exports.showidea = function(req,res){
-	res.render('layout',{title:req.params.ideaName})
+	var title = req.params.ideaName;
+	console.log(title);
+	Idea.findOne({title: title}).populate('creator').exec(function(err,idea){
+		if (err){
+			console.log('error finding idea:',err);
+		}
+		else {
+			console.log(idea.title);
+			res.render('ideaPage', {pageIdea:idea});
+		}
+	})
 }
 
 exports.suggestedIdeas=function(req,res){
@@ -109,7 +119,7 @@ exports.saveidea = function(req,res){
 							console.log(err);
 						}
 						else{
-							res.redirect('/')
+							res.redirect('/ideapool')
 						}
 					})
 				}
@@ -121,3 +131,38 @@ exports.randomidea= function(req,res){
 	console.log('called home');
 	res.render('randomidea',{title:'Random Idea'});
 };
+
+exports.renderRandomIdea = function(req,res){
+	Idea.find().populate('creator').exec(function(err,ideas){
+		if (err){
+			console.log('error finding ideas:',err);
+		}
+		else {
+
+			console.log(ideas);
+			idea = randomChoice(ideas);
+			res.render('_singleIdea', {idea: idea});
+		}
+	})
+}
+
+exports.renderYourIdeas = function(req,res){
+	user = req.session;
+	User.findOne({fbid: user.fbid}).populate('createdIdeas').exec(function(err, foundUser) {
+		if (err){
+			console.log('error',err);
+		}
+		else {
+			res.render('_yourIdeas',{yourIdeas:foundUser.createdIdeas});
+		}
+	});
+}
+
+function randInt(min,max){
+	return Math.floor(Math.random()*(max - min + 1))+min;
+}
+
+function randomChoice(list){
+	var index = randInt(0,list.length-1);
+	return list[index]
+}

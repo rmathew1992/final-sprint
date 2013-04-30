@@ -5,11 +5,11 @@ block content
 
 	div(id='newideaform')
 		form(id='saveidea', action='/saveidea', method='post')
-			h4 Title
+			p.ideaForm= 'Title'
 			input(type='text', name='title') 
-			h4 Description
+			p.ideaForm= 'Description'
 			textarea(id='description', name='description', rows='5')
-			h4 Tags
+			p.ideaForm= 'Tags'
 			input(type='text', name='tags')
 			br
 			br 

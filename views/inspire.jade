@@ -1,8 +1,14 @@
 extends layout
 
+block scripts
+	script(src='/javascripts/inspire.js')
+
 block content
 	include _navigation
 
-	div(id='generatebutton')
-			p(id="clickinspire") Generate	 
-	//include _suggestedideas
+	//- div(id='generatebutton')
+	//- 		p(id="clickinspire") Generate	 
+	//- include _suggestedideas
+	div(id='ideaWrap')
+	div(id='generateButton')
+		p= 'Generate!'

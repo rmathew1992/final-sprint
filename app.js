@@ -50,12 +50,12 @@ function facebookGetUser() {
 }
 
 app.get('/login', Facebook.loginRequired(), function(req, res){
-  res.redirect('/');
+  res.redirect('/ideapool');
 });
 app.get('/logout', facebookGetUser(), function(req, res){
   req.user = null;
   req.session.destroy();
-  res.redirect('/');
+  res.redirect('/ideapool');
 });
 
 app.get('/', facebookGetUser(), routes.index);
@@ -65,6 +65,8 @@ app.get('/inspire',routes.inspire);
 app.get('/ideas/:ideaName',routes.showidea);
 app.get('/ideapool',routes.ideapool);
 app.get('/randomidea',routes.randomidea);
+app.get('/renderRandomIdea',routes.renderRandomIdea);
+app.get('/yourIdeas',routes.renderYourIdeas);
 app.post('/saveidea',routes.saveidea);
 
 
