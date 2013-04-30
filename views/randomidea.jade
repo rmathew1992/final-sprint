@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	include _navigation
+
+	div(id='randomidea_template')
+		h1(class='temp', id='temp_title') Title
+		p(class='temp',id='temp_description') Lorem ipsum maecenas eleifend tristique rutrum. Sed pulvinar euismod est, et vulputate tortor pellentesque. Lorem ipsum dolche vita magna carta.
+		h4(class='temp',id='temp_creator') Created by {user}
+		p(class='temp',id='temp_descrip') Likes: {likes}
+		p(class='temp',id='temp_descrip') Dislikes: {dislikes}
+		
