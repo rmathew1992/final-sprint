@@ -16,6 +16,18 @@ $(function(){
 		console.log("Closing your ideas");
 		$('#navbar_ideapanel').slideUp('slow');
 	})
+	$(document).on('click','#like',function(){
+		var ideaName = $(this).attr('val');
+		$.post('/updateIdea',{liked:true,ideaName:ideaName},function(data){
+			console.log(data);
+		});
+	});
+	$(document).on('click','#dislike',function(){
+		var ideaName = $(this).attr('val');
+		$.post('/updateIdea',{liked:false,ideaName:ideaName},function(data){
+			console.log(data);
+		});
+	});
 	// $('#navbar_yourideas_close').click(function(){
 	// 	console.log("Closing your ideas");
 	// 	$('#navbar_ideapanel').hide();

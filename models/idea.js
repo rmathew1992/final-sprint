@@ -5,6 +5,9 @@ var ideaSchema = mongoose.Schema({
 	title: String,
 	tags: Array,
 	description: String,
+	url: String,
+	likes: Number,
+	dislikes: Number,
 	creator: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 	likedBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 	dislikedBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
