@@ -59,18 +59,16 @@ app.get('/logout', facebookGetUser(), function(req, res){
 });
 
 app.get('/', facebookGetUser(), routes.index);
-app.get('/users', user.list);
 app.get('/home',routes.home);
 app.get('/newidea',routes.newidea);
 app.get('/inspire',routes.inspire);
-app.get('/ideas',routes.ideas);
+app.get('/ideas/:ideaName',routes.showidea);
 app.get('/ideapool',routes.ideapool);
+app.post('/saveidea',routes.saveidea);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
-
-
 
 // :)
 
