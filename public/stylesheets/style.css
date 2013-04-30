@@ -53,6 +53,21 @@ h4{
 	width:500px;
 	height: 50px;
 }
+/*Footer*/
+#footerwrapper{
+	position: absolute;
+	width:220px;
+	left: 50%;
+	margin-left: -110px;
+	bottom:0px;
+}
+
+.footer{
+	font-family: 'LatoLight',sans-serif;
+	font-size: 10px;
+	display: inline-block;
+	padding:10px;
+}
 
 /*Inspiration page */
 .ideapanel{
@@ -172,6 +187,7 @@ p.tag {
 	font-family:'LatoLight',sans-serif;
 }
 #randomidea_template{
+	position:relative;
 	width:325px;
 	height:300px;
 	border: 1px solid rgba(0,0,0,0.5);
@@ -203,15 +219,14 @@ p.tag {
 	line-height:15px;
 	display: inline-block;
 	background-color:rgba(0,171,169,0.33);
-	margin-left: 5px;
-	margin-right: 5px;
 }
 
 #temp_tagwrapper {
-	position: absolute;
 	bottom: 0px;
-	margin-left: 15px;
+	margin-left:auto;
 	margin-right:auto;
+	padding-left:14px;
+	padding-bottom:3px;
 }
 /*inspire page*/
 
