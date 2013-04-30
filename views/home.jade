@@ -1,30 +1,22 @@
 extends layout
 
 block content
- 
 	div(id='general')
 		h1(id='alignname') App Name
-		input.textinput(type='text', placeholder='Search for an idea', id='searchbar')
+	div(id='navbar_container')
+		div(class='navbar',id='navbar_ideapool')
+			a(href='/ideapool') Explore all ideas
+		div(class='navbar',id='navbar_stuck')
+			a(href='/inspire') Feeling stuck
+		div(class='navbar',id='navbar_yourideas')
+			p Your ideas
+		div(class='navbar',id='navbar_ideapanel')
+			p Idea 1
+			p Idea 2
+			div(id='navbar_yourideas_close')
+				p Close
+	br
+	br
+	br
+	br
 	
-	div(id='navbar')
-		form(id="ideapool",action="/ideapool",method="get")
-			button(class='navbarbutton',id='navbar_ideapool') Explore all ideas
-		
-		form(id="inspire",action="/inspire",method="get")
-			button(class='navbarbutton',id='navbar_stuck') Recommend Ideas	
-		
-		button(class='navbarbutton',id='yourideas') Your Ideas
-		div(id='navbar_yourideas') 
-			h4 Idea 1
-			h4 Idea 2
-			h4 Idea 3
-		
-		
-		
-		
-
-				
-	//- form(id="inspire",action="/inspire",method="get")
-	//- 	br
-	//- 	br
-	//- 	button(id="needinspire") Stuck?	

@@ -3,6 +3,22 @@ extends layout
 block content
 	div(id='general')
 		h1(id='alignname') App Name
+	div(id='navbar_container')
+		div(class='navbar',id='navbar_ideapool')
+			a(href='/ideapool') Explore all ideas
+		div(class='navbar',id='navbar_stuck')
+			a(href='/inspire') Feeling stuck
+		div(class='navbar',id='navbar_yourideas')
+			p Your ideas
+		div(class='navbar',id='navbar_ideapanel')
+			p Idea 1
+			p Idea 2
+			div(id='navbar_yourideas_close')
+				p Close
+	br
+	br
+	br
+	br
 	br
 	div(id='newideaform')
 		form(id='saveidea', action='/savegoal', method='post')

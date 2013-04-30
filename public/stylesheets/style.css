@@ -1,11 +1,22 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding:0px;
+	margin:0px;	
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+div{
+	padding:0px;
+	margin:0px;
+}
+p{
+	padding:0px;
+	margin:0px;
 }
 
 a {
-  color: #00B7FF;
+	color: black;
+	text-decoration: none;
 }
+
 
 /*General CSS styling*/
 #alignname{
@@ -15,13 +26,16 @@ a {
 	border-bottom: solid #8A8484;
 	border-width: 1.5px;
 }
-.navbarbutton{
-	float:left;
-}
+
 #searchbar{
 	border-radius: 5px;
 	padding: 0px;
 }
+.navbar{
+	float:left;
+	padding:10px;
+}
+
 
 
 /*Inspiration page */
