@@ -1,3 +1,4 @@
+/*General Styling */
 body {
 	padding:0px;
 	margin:0px;	
@@ -25,7 +26,7 @@ h4{
 	padding: 0px;
 	margin: 0px;
 }
-/*General CSS styling*/
+/*Nav bar*/
 #alignname{
 	text-align: right;
 	padding: 20px;
@@ -52,8 +53,6 @@ h4{
 	width:500px;
 	height: 50px;
 }
-
-
 
 /*Inspiration page */
 .ideapanel{
@@ -82,7 +81,6 @@ h4{
 }
 
 /*New Idea page */
-
 #newideaform{
 	width:250px;
 	height:350px;
@@ -100,7 +98,6 @@ p.ideaForm {
 }
 
 /*Idea pool*/
-
 .ideaPoolWrap {
 	padding:50px;
 }
@@ -141,7 +138,6 @@ div.tagWrap {
 /*	display:table;
 	text-align:center;*/
 }
-
 
 div.tag {
 	display: inline-block;
@@ -204,14 +200,11 @@ p.tag {
 	text-align:justify;
 	font-family:'LatoLight',sans-serif;
 	font-size:12px;
-	margin-left:5px;
-	margin-right:5px;
 	line-height:15px;
 	display: inline-block;
 	background-color:rgba(0,171,169,0.33);
 	margin-left: 5px;
 	margin-right: 5px;
-	margin-bottom: 5px;
 }
 
 #temp_tagwrapper {
@@ -220,8 +213,7 @@ p.tag {
 	margin-left: 15px;
 	margin-right:auto;
 }
-
-/*Inspire*/
+/*inspire page*/
 
 #generateButton{
 	margin-left:auto;

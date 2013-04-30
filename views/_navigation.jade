@@ -2,13 +2,15 @@ extends layout
 
 block content
 	div(id='general')
-		h1(id='alignname') App Name
+		h1(id='alignname') Ideation App
 		input.textinput(id='searchbar',type='text',placeholder='Search')
 	div(id='navbar_container')
 		div(class='navbar',id='navbar_ideapool')
 			a(href='/ideapool') Explore all ideas
 		div(class='navbar',id='navbar_stuck')
 			a(href='/inspire') Feeling stuck
+		div(class='navbar',id='navbar_createanidea')
+			a(href='/newidea') Create an idea
 		div(class='navbar',id='navbar_yourideas')
 			p Your ideas
-		div(class='navbar',id='navbar_ideapanel')
+			div(class='navbar',id='navbar_ideapanel')

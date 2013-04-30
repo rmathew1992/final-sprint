@@ -128,7 +128,7 @@ exports.saveidea = function(req,res){
 	});
 }
 exports.randomidea= function(req,res){
-	console.log('called home');
+	console.log('called random');
 	res.render('randomidea',{title:'Random Idea'});
 };
 

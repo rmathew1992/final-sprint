@@ -1,14 +1,20 @@
 extends layout
 
-block scripts
-	script(src='/javascripts/inspire.js')
-
 block content
 	include _navigation
 
-	//- div(id='generatebutton')
-	//- 		p(id="clickinspire") Generate	 
-	//- include _suggestedideas
-	div(id='ideaWrap')
-	div(id='generateButton')
-		p= 'Generate!'
+	div(id='generatebutton')
+			p(id="clickinspire") Generate	 
+	//include _suggestedideas
+	div(id='generateidea_template')
+		h1(class='gen', id='gen_title') Title
+		p(class='gen',id='gen_description') Lorem ipsum maecenas eleifend tristique rutrum. Sed pulvinar euismod est, et vulputate tortor pellentesque. Lorem ipsum dolche vita magna carta.Praesent suscipit nisl ac augue ullamcorper nec interdum nisl accumsan. Phasellus nisi leo, tempor vitae tincidunt id, tincidunt nec dui. Pellentesque faucibus iaculis elit in volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris at vestibulum odio. Praesent quis vestibulum tellus. Morbi scelerisque, tellus nec imperdiet cursus, elit ante posuere sem, in viverra tellus ligula in ligula. Sed quis nulla non dolor rhoncus pharetra. 
+		h4(class='gen',id='gen_creator') Created by {user}
+		div(id='popularity')
+			img(border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10')
+			p(class='gen',id='gen_likes',class='gen_img') {likes}
+			img(border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img')
+			p(class='gen',id='gen_dislikes') {dislikes}
+		div(id='gen_tagwrapper')
+			p(class='gen',class='gen_tags') Tag 1
+			p(class='gen',class='gen_tags') Tag 2
