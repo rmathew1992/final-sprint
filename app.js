@@ -58,7 +58,7 @@ app.get('/logout', facebookGetUser(), function(req, res){
   res.redirect('/');
 });
 
-app.get('/', facebookGetUser(), routes.index);
+app.get('/', facebookGetUser(), routes.ideapool);
 app.get('/home',routes.home);
 app.get('/newidea',routes.newidea);
 app.get('/inspire',routes.inspire);
