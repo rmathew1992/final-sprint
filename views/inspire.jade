@@ -10,9 +10,9 @@ block content
 			a(href='/ideas/'+idea.title)
 				p.title= idea.title
 			if idea.anonymous
-				p.creator= 'By '+idea.creator[0].name
-			else
 				p.creator= 'By Anonymous'
+			else
+				p.creator= 'By '+idea.creator[0].name
 			p.description= idea.preview
 			div(class='tagWrap')
 				each tag in idea.tags
