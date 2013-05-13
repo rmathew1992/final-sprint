@@ -5,22 +5,29 @@ block scripts
 
 block content
 	include _navigation
-
-	div(id='generateButton')
-		p= 'Generate'	
-	div(id='ideaWrap') 
-	//- //include _suggestedideas
-	//- div(id='generateidea_template')
-	//- 	h1(class='gen', id='gen_title') Title
-	//- 	p(class='gen',id='gen_description') Lorem ipsum maecenas eleifend tristique rutrum. Sed pulvinar euismod est, et vulputate tortor pellentesque. Lorem ipsum dolche vita magna carta.Praesent suscipit nisl ac augue ullamcorper nec interdum nisl accumsan. Phasellus nisi leo, tempor vitae tincidunt id, tincidunt nec dui. Pellentesque faucibus iaculis elit in volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris at vestibulum odio. Praesent quis vestibulum tellus. Morbi scelerisque, tellus nec imperdiet cursus, elit ante posuere sem, in viverra tellus ligula in ligula. Sed quis nulla non dolor rhoncus pharetra. 
-	//- 	h4(class='gen',id='gen_creator') Created by {user}
-	//- 	div(id='popularity')
-	//- 		img(border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10')
-	//- 		p(class='gen',id='gen_likes',class='gen_img') {likes}
-	//- 		img(border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img')
-	//- 		p(class='gen',id='gen_dislikes') {dislikes}
-	//- 	div(id='gen_tagwrapper')
-	//- 		p(class='gen',class='gen_tags') Tag 1
-	//- 		p(class='gen',class='gen_tags') Tag 2
+	div(class='ideaPoolWrap')
+		div(class='ideaPreview')
+			a(href='/ideas/'+idea.title)
+				p.title= idea.title
+			if idea.anonymous
+				p.creator= 'By '+idea.creator[0].name
+			else
+				p.creator= 'By Anonymous'
+			p.description= idea.preview
+			div(class='tagWrap')
+				each tag in idea.tags
+					div(class='tag')
+						p.tag= tag
+			div(class='popularity')
+				img(id='like',border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10',val=idea.title)
+				p(class='dislikes',class='temp_img')= idea.likes
+				img(id='dislike',border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img',val=idea.title)
+				p(class='dislikes',class='temp_img')= idea.dislikes
+					
+	div(id='buttonWrap')
+		div(id='generateButton')
+			p= 'Generate'	
+		div(id='mashupButton')
+			p= 'Mashup'
 
 	include _footer

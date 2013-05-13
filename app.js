@@ -37,6 +37,7 @@ app.configure('development', function(){
 
 //req.user is actually facebook ID not name
 function facebookGetUser() {
+  console.log('called facebookgetuser');
   return function(req, res, next) {
     req.facebook.getUser( function(err, user) {
       if (!user || err){
@@ -50,7 +51,7 @@ function facebookGetUser() {
 }
 
 app.get('/login', Facebook.loginRequired(), function(req, res){
-  res.redirect('/home');
+  res.redirect('/');
 });
 app.get('/logout', facebookGetUser(), function(req, res){
   req.user = null;
@@ -58,18 +59,20 @@ app.get('/logout', facebookGetUser(), function(req, res){
   res.redirect('/');
 });
 
-app.get('/', facebookGetUser(), routes.ideapool);
+app.get('/', facebookGetUser(), routes.index);
 app.get('/home',routes.home);
 app.get('/newidea',routes.newidea);
 app.get('/inspire',routes.inspire);
 app.get('/ideas/:ideaName',routes.showIdea);
 app.get('/ideapool',routes.ideapool);
 app.get('/randomidea',routes.randomidea);
-app.get('/renderRandomIdea',routes.renderRandomIdea);
+app.post('/renderRandomIdea',routes.renderRandomIdea);
 app.get('/yourIdeas',routes.renderYourIdeas);
 app.get('/feedback',routes.feedback);
 app.post('/saveidea',routes.saveidea);
 app.post('/updateIdea',routes.updateIdea);
+app.post('/search',routes.search);
+app.post('/saveComment',routes.saveComment);
 
 
 http.createServer(app).listen(app.get('port'), function(){

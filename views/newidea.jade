@@ -9,10 +9,12 @@ block content
 			input(type='text', name='title') 
 			p.ideaForm= 'Description'
 			textarea(id='description', name='description', rows='5')
-			p.ideaForm= 'Tags'
+			p.ideaForm= 'Tags (comma seperated)'
 			input(type='text', name='tags')
-			br
-			br 
-			button(id="Save") Save
+			div(id='commentInterfaceWrap')
+				button(id="Save") Save
+				input(class='newIdea',type="checkbox", name="anonymous", value="anonymous")
+				p.newIdea= 'Anonymous?'
+			//- button(id="Save") Save
 
 	include _footer

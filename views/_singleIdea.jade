@@ -1,5 +1,6 @@
 div(class='ideaPreview')
-	p.title= idea.title
+	a(href='/ideas/'+idea.title)
+		p.title= idea.title
 	p.description= idea.description
 	div(class='tagWrap')
 		each tag in idea.tags

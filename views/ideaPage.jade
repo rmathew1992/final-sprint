@@ -3,18 +3,40 @@ extends layout
 block content
 	include _navigation
 
-	div(id='ideaWrap')
-		div(class='ideaPreview')
-			p.title= idea.title
-			p.description= idea.description
-			div(class='tagWrap')
-				each tag in idea.tags
-					div(class='tag')
-						p.tag= tag
-			div(class='popularity')
-				img(id='like',border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10',val= idea.title)
-				p(class='dislikes',class='temp_img')= idea.likes
-				img(id='dislike',border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img',val=idea.title)
-				p(class='dislikes',class='temp_img')= idea.dislikes
-	
+	a(href='/ideas/'+idea.title)
+		h1.title.page= idea.title+ ' by '+idea.creator[0].name
+	div(class='popularityIdeaPage')
+		img(id='like',border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10',val=idea.title)
+		p(class='dislikes',class='temp_img')= idea.likes
+		img(id='dislike',border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img',val=idea.title)
+		p(class='dislikes',class='temp_img')= idea.dislikes
+	div(class='descriptionWrap')
+		p.page= 'Description'
+		p.descriptionIdeaPage.page= idea.description
+	div(class='tagWrapIdeaPage')
+		p.tags= 'Tags'
+		each tag in idea.tags
+			div(class='tag')
+				p.tag= tag
+	//- p.page= 'Popularity'
+	//- 	p.page= idea.likes+' Likes'
+	//- 	p.page= idea.dislikes+' Dislikes'
+	div(id='commentWrap')
+		div.linebreak
+		h2.comment= 'Comments:'
+		each comment in idea.comments
+			div(class='comment')
+				if comment.anonymous
+					p.commentName= 'Anonymous'
+				else
+					p.commentName= comment.creatorName
+				p.commentText= comment.text
+				div.linebreak.light
+	div(id='commentField')
+		p.contentEditable(contenteditable="true")= 'Write a comment here...'
+	div(id='commentInterfaceWrap')
+		div(id='commentButton')
+			p= 'Post comment'
+		input(class='checkbox',type="checkbox", name="anonymous", value="anonymous")
+		p.checkbox= 'Anonymous?'
 	include _footer

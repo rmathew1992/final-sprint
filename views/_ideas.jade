@@ -1,0 +1,18 @@
+each idea,i in ideas
+	div(class='ideaPreview')
+		a(href='/ideas/'+idea.title)
+			p.title= idea.title
+		if idea.anonymous
+			p.creator= 'By '+idea.creator[0].name
+		else
+			p.creator= 'By Anonymous'
+		p.description= idea.preview
+		div(class='tagWrap')
+			each tag in idea.tags
+				div(class='tag')
+					p.tag= tag
+		div(class='popularity')
+			img(id='like',border='0', src='/images/arrow-up.jpg', alt='up arrow',height='10',val=idea.title)
+			p(class='dislikes',class='temp_img')= idea.likes
+			img(id='dislike',border='0', src='/images/arrow-down.jpg', alt='down arrow',height='10',class='temp_img',val=idea.title)
+			p(class='dislikes',class='temp_img')= idea.dislikes
