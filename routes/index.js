@@ -13,6 +13,7 @@ exports.index = function(req, res){
 			console.log(err)
 		}
 		else {
+
 			console.log(user);
 			User.findOne({fbid: user.id}).exec(function(err, foundUser) {
 				if (foundUser == null){
@@ -47,8 +48,15 @@ exports.login = function(req, res){
 };
 
 exports.home= function(req,res){
-	console.log('called home');
-	res.render('home',{title:'Landing Page'});
+	Idea.find().populate('ideas').exec(function(err,ideas){
+		if (err){
+			console.log('error finding ideas:',err);
+		}
+		else {
+			console.log('called home');
+			res.render('home',{title:'Landing Page',ideas:ideas});
+		}
+	})
 };
 
 exports.inspire= function(req,res){

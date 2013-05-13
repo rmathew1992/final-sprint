@@ -1,10 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div(id='logindiv')
-    h2
-      | Get Started:
-    a(href='/login')
-      img(id='loginbutton', src='../images/facebook_login.png',)
+	h1(id='login_header') IdeaFish
+	h2(id='login_subheader') Where great ideas come alive
+	div(id='logwrapper')	
+		div(id='create',class='getting_started')
+			h3 Create an idea
+			img(id='pencil',border='0', src='/images/pencil.jpg', alt='pencil',height='100',class='getting_started_img')
+		div(id='explore',class='getting_started')
+			h3 Explore the idea pool
+			img(id='bino',border='0', src='/images/bino.jpg', alt='binoculars',height='100',class='getting_started_img')
+		div(id='inspire',class='getting_started')
+			h3 Get inspired
+			img(id='lightbulb',border='0', src='/images/lightbulb.jpg', alt='lightbulb',height='100',class='getting_started_img')
+
+	div(id='logindiv')
+		a(href='/login')
+			img(id='loginbutton', width='150',src='../images/fb_login_icon.png')

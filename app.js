@@ -40,7 +40,7 @@ function facebookGetUser() {
   return function(req, res, next) {
     req.facebook.getUser( function(err, user) {
       if (!user || err){
-        res.render('login', {title: "How's life?"})
+        res.render('login', {title: "Welcome to IdeaFish"})
       } else {
         req.session.fbid = user;
         next();
@@ -50,7 +50,7 @@ function facebookGetUser() {
 }
 
 app.get('/login', Facebook.loginRequired(), function(req, res){
-  res.redirect('/');
+  res.redirect('/home');
 });
 app.get('/logout', facebookGetUser(), function(req, res){
   req.user = null;

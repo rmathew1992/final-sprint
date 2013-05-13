@@ -29,9 +29,21 @@ h4{
 /*Nav bar*/
 #alignname{
 	text-align: right;
-	padding: 20px;
+	font-family:'LatoLight',sans-serif, bold;
+	padding-top:20px;
+	padding-right: 40px;
+	font-weight: bold;
+	font-size: 50px;
+	
+}
+#alignlogo{
+	text-align: right;
+	line-height: 0;
+	padding-bottom:20px;
+	padding-right:20px;
 	font-family:'LatoLight',sans-serif, bold;
 }
+
 #general{
 	border-bottom: solid #8A8484;
 	border-width: 1.5px;
@@ -45,15 +57,19 @@ h4{
 	margin-left:10px;
 	padding-left: 10px;
 }
+
 .navbar{
 	float:left;
 	padding:10px;
 }
+
 #navbar_container{
 	width:800px;
 	height: 50px;
 }
+
 /*Footer*/
+
 #footerwrapper{
 	position: absolute;
 	width:220px;
@@ -66,33 +82,8 @@ h4{
 	font-family: 'LatoLight',sans-serif;
 	font-size: 10px;
 	display: inline-block;
-	padding:10px;
-}
-
-/*Inspiration page */
-.ideapanel{
-	float:left;
-	border-color:black;
-	border-style: solid;
-	padding:190px;
-	margin:10px;
-	box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
-	font-family:'Lato-Hailta',sans-serif;
-}
-
-.ideapanel:hover{
-	box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
-}
-#clickinspire{    
-	height:20px; 
-    width:100px; 
-    margin: -20px -50px; 
-    position:relative;
-    top:50%; 
-    left:50%;
-	font-family:'Lato-Hailta',sans-serif;
-	font-size:25px;
-
+	padding-right: 10px;
+	padding-top: 10px;
 }
 
 /*New Idea page */
@@ -123,7 +114,7 @@ p.ideaForm {
 	width:225px;
 	height:275px;
 	border: 1px solid rgba(0,0,0,0.5);
-	margin-right:20px;
+	margin-right:35px;
 	margin-bottom:20px;
 /*	background-color:rgba(0,171,169,0.5);*/
 }
@@ -262,4 +253,160 @@ p.tag {
 	margin-right:auto;
 	margin-top:20px;
 	margin-bottom:20px;
+}
+
+
+/* Home */
+
+#slideshow {
+    width: 65%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-left:250px;
+}
+
+#slideshow-reel {
+    width: 5400px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slideshow-reel .slide {
+    width: 225px;
+    height:275px;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.5);
+    margin:10px;
+}
+
+#slideshow-prev, #slideshow-next {
+    display: block;
+    position: absolute;
+    top: 190px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 21px;
+    border-color: transparent;
+    outline: none;
+}
+
+#slideshow-prev:hover, #slideshow-next:hover {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+#slideshow-prev {
+	position: absolute;
+	top: 325px;
+	width: 210px;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent; 
+	border-right-style:solid;
+	border-right-width:28px 21px;
+	border-right-color:#303030;
+	outline:none;
+}
+
+#slideshow-next {
+	position: absolute;
+	right:60px;
+	top: 325px;
+	width: 150px;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent; 
+	border-left-style:solid;
+	border-left-width: 28px 21px;
+	border-left-color:#303030;
+	outline:none;
+}
+
+div.slide_tagWrap {
+	position: absolute;
+	margin-left:auto;
+	margin-right:auto;
+	bottom:40%;
+	padding-left: 5px;
+}
+
+div.slide_tag {
+	display: inline-block;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:5px;
+	background-color:rgba(0,171,169,0.33);
+}
+
+p.slide_tag {
+	text-align:justify;
+	font-family:'LatoLight',sans-serif;
+	font-size:12px;
+	margin-left:5px;
+	margin-right:5px;
+	line-height:15px;
+}
+
+.slide_popularity{
+	position:absolute;
+	top: 10px;
+	width:20px;
+}
+#simple_headerh1{
+	text-align: center;
+	font-family:'LatoLight',sans-serif;
+	font-size:33px;
+	color:rgb(51,153,51);
+}
+#simple_headerh2{
+	text-align: center;
+	font-family:'LatoLight',sans-serif;
+	padding-bottom:10px;
+	color:#4D4D4D;
+
+}
+
+#get_started{
+	padding-left:200px;
+}
+.getting_started{
+	font-size: 25px;
+	font-family:'LatoLight',sans-serif;
+	float:left;
+	color:#4D4D4D;
+	padding-top: 20px;
+	padding-left: 200px;
+	text-align: center;
+}
+
+/*Login page*/
+
+#login_header{
+	font-family: 'LatoLight',sans-serif;
+	font-size: 50px;
+	text-align: center;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:50px;
+	color:rgb(51,153,51);
+}
+
+#login_subheader{
+	font-family: 'LatoLight',sans-serif;
+	text-align: center;
+}
+#logindiv{
+	text-align: center
+}
+#logwrapper{
+	width:3500px;
+	height:250px;
+	padding-left: 190px;
 }
