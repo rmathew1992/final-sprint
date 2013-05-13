@@ -74,7 +74,7 @@ h4{
 	position: absolute;
 	width:220px;
 	left: 50%;
-	margin-left: -110px;
+	margin-left: -100px;
 	bottom:0px;
 }
 
@@ -84,6 +84,30 @@ h4{
 	display: inline-block;
 	padding-right: 10px;
 	padding-top: 10px;
+}
+.feed1{
+	font-family: 'LatoLight',sans-serif;
+	color:rgb(51,153,51);
+}
+#feed{
+	height:150px;
+	width:300px;
+
+}
+#feedwrap{
+	margin-left: 500px;
+
+}
+#submitfeed{
+	font-family: 'LatoLight',sans-serif;
+	font-size: 15px;
+	background-color: rgb(51,153,51);
+	margin-top: 20px;
+	width:50px;
+	padding: 10px;
+}
+#colortext{
+	color:white;
 }
 
 /*New Idea page */
@@ -398,7 +422,7 @@ p.slide_tag {
 	color:rgb(51,153,51);
 }
 
-#login_subheader{
+.login_subheader{
 	font-family: 'LatoLight',sans-serif;
 	text-align: center;
 }
@@ -409,4 +433,16 @@ p.slide_tag {
 	width:3500px;
 	height:250px;
 	padding-left: 190px;
+}
+.loginpage{
+	font-size: 25px;
+	font-family:'LatoLight',sans-serif;
+	color:#4D4D4D;
+	padding-top: 20px;
+	padding-left: 200px;
+	text-align: center;
+}
+.login_img{
+	text-align:center;
+	padding-left: 675px;
 }

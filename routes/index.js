@@ -47,6 +47,11 @@ exports.login = function(req, res){
 	res.render('login', { title: 'Login Page' })
 };
 
+exports.feedback = function(req, res){
+	console.log('called feedback');
+	res.render('feedback', { title: 'Feedback' })
+};
+
 exports.home= function(req,res){
 	Idea.find().populate('ideas').exec(function(err,ideas){
 		if (err){

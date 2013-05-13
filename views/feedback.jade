@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	include _navigation
+	div(id='feedwrap')
+		h2(class='feed1') Feedback
+		input(type='text', name='tags',id='feed',class='feed1')
+		div(id="submitfeed") 
+			a(href='/')
+				p(id='colortext') Submit
+
+	include _footer

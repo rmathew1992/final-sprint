@@ -67,6 +67,7 @@ app.get('/ideapool',routes.ideapool);
 app.get('/randomidea',routes.randomidea);
 app.get('/renderRandomIdea',routes.renderRandomIdea);
 app.get('/yourIdeas',routes.renderYourIdeas);
+app.get('/feedback',routes.feedback);
 app.post('/saveidea',routes.saveidea);
 app.post('/updateIdea',routes.updateIdea);
 
