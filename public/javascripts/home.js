@@ -4,7 +4,7 @@ $(function(){
   	adjustCSS();
     console.log("ready");
 
-	$('#navbar_ideapanel').hide();	
+/*	$('#navbar_ideapanel').hide();	
 	$('#navbar_yourideas').click(function(){
 		if (clicks % 2 == 0){
 			console.log("You clicked it");
@@ -26,7 +26,7 @@ $(function(){
 		// 	$('#navbar_ideapanel').slideDown('slow');
 		// });
 		// $('#navbar_ideapanel').slideDown('slow');
-	})
+	})*/
 	// $(document).on('click','#navbar_yourideas_close',function(event){
 	// 	event.stopImmediatePropagation();
 	// 	console.log("Closing your ideas");
