@@ -321,6 +321,7 @@ exports.search = function(req,res){
 exports.saveComment = function(req,res){
 	var user = req.session;
 	var data = req.body;
+	console.log(data);
 	User.findOne({fbid: user.fbid}).exec(function(err, foundUser) {
 		if (err){
 			console.log('error',err);

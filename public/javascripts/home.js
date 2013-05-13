@@ -133,7 +133,7 @@ $(function(){
 	$(document).on('click','#commentButton',function(){
 		var text = $('p.contentEditable').text();
 		if (text != 'Write a comment here...'){
-			var anonymous = $('#checkbox').is(':checked');
+			var anonymous = $('input.checkbox').is(':checked');
 			var ideaName = $('h1.title').text().split(' by')[0];
 			console.log(ideaName);
 			$.post('/saveComment',{text:text,anonymous:anonymous,ideaName:ideaName},function(data){

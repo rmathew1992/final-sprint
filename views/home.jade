@@ -16,6 +16,7 @@ block content
 						p.creator= 'By Anonymous'
 					else
 						p.creator= 'By '+idea.creator[0].name
+					p.description= idea.preview
 					div(class='slide_tagWrap')
 						each tag in idea.tags
 							div(class='slide_tag')
