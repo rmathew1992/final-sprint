@@ -137,6 +137,7 @@ $(function(){
 			var ideaName = $('p.title').text();
 			$.post('/saveComment',{text:text,anonymous:anonymous,ideaName:ideaName},function(data){
 				console.log(data);
+				location.reload();
 			});			
 		}
 		else{

@@ -10,8 +10,12 @@ block content
 		div(id="slideshow-reel")
 			each idea in ideas
 				div(class='slide')
-					p.title= idea.title
-					p.description= idea.description
+					a(href='/ideas/'+idea.title)
+						p.title= idea.title
+					if idea.anonymous
+						p.creator= 'By '+idea.creator[0].name
+					else
+						p.creator= 'By Anonymous'
 					div(class='slide_tagWrap')
 						each tag in idea.tags
 							div(class='slide_tag')
