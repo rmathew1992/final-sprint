@@ -1,6 +1,7 @@
 var clicks = 0;
 $(function(){
   $(document).ready(function() {
+  	adjustCSS();
     console.log("ready");
 
 	$('#navbar_ideapanel').hide();	
@@ -123,7 +124,6 @@ $(function(){
   });
 
 });
-});
 	$(document).on('click','div.tag',function(){
 		var query = $(this).text();
 		var form = $('<form action="/search" style="display:none;" method="post">'+'<input type="text" name="query" value="' + query + '" />'+'</form>');
@@ -143,9 +143,20 @@ $(function(){
 			alert("You haven't written anything");
 		}
 	});
+	$(window).resize(function(){
+		adjustCSS();
+	});
+	// $('.ideaPoolWrap').
 	// $('#navbar_yourideas_close').click(function(){
 	// 	console.log("Closing your ideas");
 	// 	$('#navbar_ideapanel').hide();
 	// })
-  	});
-})
+});
+
+function adjustCSS(){
+	// var width = $(document).width();
+	// var IPWidth = $('.ideaPoolWrap').width();
+	// $('.ideaPoolWrap').css('margin-left',(width-IPWidth)/2);
+	// $('.ideaPoolWrap').css('margin-right',(width-IPWidth)/2);
+	// console.log(width);
+}

@@ -135,13 +135,27 @@ exports.saveidea = function(req,res){
 			console.log('error',err);
 		}
 		else{
-			console.log(foundUser);
+			if (idea.description.length > 200){
+				var preview = idea.description.substr(0,200)+'...';
+			}
+			else{
+				var preview = idea.description;
+			}
+			console.log(idea.tags.split(",").length);
+			if (idea.tags.split(",").length == 0){
+				var tags = ['ideaFish'];
+			}
+			else{
+				var tags = idea.tags.split(",");
+				tags.push('ideaFish');
+			}
+
 			var newIdea = new Idea({
 				title: idea.title,
 				anonymous: anonymous,
-				tags: idea.tags.split(","),
+				tags: tags,
 				description: idea.description,
-				preview: idea.description.substr(0,200)+'...',
+				preview: preview,
 				url: '/ideas/'+idea.title,
 				creator: [foundUser._id],
 				likes: 1,
