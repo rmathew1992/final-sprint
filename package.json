@@ -10,8 +10,7 @@
     "express": "3.0.6",
     "jade": "*",
     "mongoose": "3.x",
-    "facebook-client": "1.3.0",
-    "facebook": "0.0.3"
+    "facebook-node-sdk": "0.2.0"
   },
     "engines": {
     "node": "0.8.14 ",
